@@ -35,4 +35,5 @@ test {
 bootJar {
     enabled = true
     archiveBaseName.set('p')
+    archiveFileName = "product-services.jar"
 }

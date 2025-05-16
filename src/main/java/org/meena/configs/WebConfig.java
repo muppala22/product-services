@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-               .allowedOrigins("*") // Update this with your Render frontend URL when you have it
+               .allowedOrigins("https://product-explorer.onrender.com") // Update this with your Render frontend URL when you have it
                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                .allowedHeaders("*");
     }
