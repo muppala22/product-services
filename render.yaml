@@ -2,9 +2,6 @@ services:
   - type: web
     name: product-services
     plan: free
-    buildCommand: ./gradlew build
-    startCommand: java -jar build/libs/product-services.jar
-    runtime: java17
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://localhost:5432/product_db
