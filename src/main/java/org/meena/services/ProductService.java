@@ -20,7 +20,7 @@ public class ProductService {
     }
 
     // Method to get a product by its ID
-    public Optional<Product> getProductById(Long id) {
+    public Optional<Product> getProductById(Integer id) {
         return productRepository.findById(id);
     }
 }

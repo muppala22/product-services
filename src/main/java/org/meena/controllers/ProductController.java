@@ -25,7 +25,7 @@ public class ProductController {
 
     // Endpoint to get a product by ID
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getProductById(@PathVariable Long id) {
+    public ResponseEntity<Product> getProductById(@PathVariable Integer id) {
         Optional<Product> product = productService.getProductById(id);
 
         if (product.isPresent()) {
@@ -34,4 +34,10 @@ public class ProductController {
             return ResponseEntity.notFound().build();
         }
     }
+
+    @GetMapping("/test")
+    public String test() {
+        return "API is working!";
+    }
+
 }
