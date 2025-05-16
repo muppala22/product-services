@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: product-services
+    env: java
+    plan: free
+    buildCommand: ./gradlew build
+    startCommand: java -jar build/libs/*.jar
+    envVars:
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:postgresql://localhost:5432/product_db
+      - key: SPRING_DATASOURCE_USERNAME
+        value: user_meena
+      - key: SPRING_DATASOURCE_PASSWORD
+        value: meena456
+      - key: PORT
+        value: 8081
