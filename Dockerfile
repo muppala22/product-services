@@ -1,3 +1,8 @@
+FROM eclipse-temurin:11-jdk AS builder
+WORKDIR /app
+COPY . .
+RUN ./gradlew bootJar
+
 FROM eclipse-temurin:11-jre-focal
 WORKDIR /app
 COPY build/libs/product-services.jar app.jar
