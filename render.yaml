@@ -4,6 +4,7 @@ services:
     plan: free
     env: java
     buildCommand: ./gradlew build
+    startCommand: java -jar build/libs/product-services.jar
     envVars:
       - key: SPRING_DATASOURCE_URL
         value: jdbc:postgresql://localhost:5432/product_db
