@@ -2,7 +2,7 @@ services:
   - type: web
     name: product-services
     plan: free
-    runtime: docker
+    env: java
     buildCommand: ./gradlew build
     envVars:
       - key: SPRING_DATASOURCE_URL
